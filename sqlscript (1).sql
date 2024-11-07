@@ -66,7 +66,7 @@ create table customer(
     price number not null  
 );
 
-insert into customer(custno,custname,age,product,price)VALUES(1,'Harshita',18,'',200);
+insert into customer(custno,custname,age,product,price)VALUES(1,'Daksh',18,'',200);
 
 alter table customer  
 add constraint unique_name unique(custname);
