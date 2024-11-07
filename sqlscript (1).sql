@@ -13,15 +13,15 @@ create table emp(
 alter table emp 
 add comission number;
 
-insert into emp(empno,empname,job,mgr,salary,comission)VALUES (1,'aliya','doctor',5,300,1200);
+insert into emp(empno,empname,job,mgr,salary,comission)VALUES (1,'daksh','doctor',5,300,1200);
 
-insert into emp(empno,empname,job,mgr,salary,comission)VALUES (2,'harshita','engineer',5,400,1300);
+insert into emp(empno,empname,job,mgr,salary,comission)VALUES (2,'isha','engineer',5,400,1300);
 
 insert into emp(empno,empname,job,mgr,salary,comission)VALUES (4,'alex','engineer',5,600,1000);
 
-insert into emp(empno,empname,job,mgr,salary,comission)VALUES (3,'jonah','architect',5,500,1500);
+insert into emp(empno,empname,job,mgr,salary,comission)VALUES (3,'naman','architect',5,500,1500);
 
-insert into emp(empno,empname,job,mgr,salary,comission)VALUES (5,'anmol','marketing',5,1700,800);
+insert into emp(empno,empname,job,mgr,salary,comission)VALUES (5,'ishika','marketing',5,1700,800);
 
 update emp  
 set job='trainee'  
@@ -83,19 +83,19 @@ create table emp5(
     age number,  
     salary number);
 
-insert into emp5(empid,empname,salary,age)VALUES(1,'Ram',10000,21);
+insert into emp5(empid,empname,salary,age)VALUES(1,'Rajat',10000,21);
 
-insert into emp5(empid,empname,salary,age)VALUES(2,'Shyam',8000, 26);
+insert into emp5(empid,empname,salary,age)VALUES(2,'Sahil',8000, 26);
 
-insert into emp5(empid,empname,salary,age)VALUES(3,'Ghanshyam',8000,26);
+insert into emp5(empid,empname,salary,age)VALUES(3,'Ganshyam',8000,26);
 
 insert into emp5(empid,empname,salary,age)VALUES(4,'Hari',28000,32);
 
-insert into emp5(empid,empname,salary,age)VALUES(5,'Gauri',11000,22);
+insert into emp5(empid,empname,salary,age)VALUES(5,'Golu',11000,22);
 
-insert into emp5(empid,empname,salary,age)VALUES(6,'kashish',12000,23);
+insert into emp5(empid,empname,salary,age)VALUES(6,'kashu',12000,23);
 
-insert into emp5(empid,empname,salary,age)VALUES(7,'Harshita',35000,24);
+insert into emp5(empid,empname,salary,age)VALUES(7,'Harshu',35000,24);
 
 select count(*)  
 from emp5;
