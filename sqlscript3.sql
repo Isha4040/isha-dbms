@@ -48,3 +48,54 @@ SELECT Order_ID, Amount FROM ORDERS;
 
 SELECT SUM(Amount) AS Total_Amount FROM ORDERS WHERE Amount > 15000;
 
+ This is a general command; the actual command may vary based on the database system.
+-- For Oracle, you might use RMAN or Data Pump.
+-- Example using Data Pump:
+EXPDP username/password DIRECTORY=backup_dir DUMPFILE=backup.dmp LOGFILE=backup.log FULL=y;
+12. Write a query to restore a database
+sql
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+-- This is a general command; the actual command may vary based on the database system.
+-- For Oracle, you might use RMAN or Data Pump.
+-- Example using Data Pump:
+IMPDP username/password DIRECTORY=backup_dir DUMPFILE=backup.dmp LOGFILE=restore.log FULL=y;
+Case Study: Combining Data from Multiple Tables
+Method 1: Joining to the Status table ```sql
+SELECT E.Event_id, E.Duration, S.Name AS Status_Name FROM Event E INNER JOIN Status S ON E.Status_code = S.Status_code;
+
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+
+#### Method 2: Utilizing UNION to Combine Reason Table Rows
+
+```sql
+SELECT Reason_code, Name FROM Ready_Reason
+UNION
+SELECT Reason_code, Name FROM Delay_Reason;
+Method 3: Using LEFT JOIN to Include All Events with Status and Reasons
+sql
+
+Verify
+
+Open In Editor
+Edit
+Copy code
+SELECT E.Event_id, E.Duration, S.Name AS Status_Name, RR.Name AS Ready_Reason_Name, DR.Name AS Delay_Reason_Name 
+FROM Event E 
+LEFT JOIN Status S ON E.Status_code = S.Status_code 
+LEFT JOIN Ready_Reason RR ON E.Reason_code = RR.Reason_code 
+LEFT JOIN Delay_Reason DR ON E.Reason_code = DR.Reason_code;
+These SQL statements will create the necessary tables, insert the data, and perform the required queries as per your request. Make sure to execute each part in a SQL environment that supports these commands.
+
+
+
+
